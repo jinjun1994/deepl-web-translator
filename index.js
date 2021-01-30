@@ -25,12 +25,6 @@ const INPUT_SELECTOR = "textarea[dl-test=translator-source-input]";
 const OUTPUT_SELECTOR = "textarea[dl-test=translator-target-input]";
 
 export default class Translate {
-  //@ts-ignore
-  page;
-  //@ts-ignore
-  browser;
-  input;
-  output;
   constructor(headless, input, output) {
     this.input = Langs[input];
     this.output = Langs[output];
