@@ -2,7 +2,7 @@
 
 import puppeteer from "puppeteer";
 const URL = "https://www.deepl.com/translator";
-
+import Langs from "./lang.js";
 const LANGS_SELECTOR = {
   input: {
     button: ".lmt__language_select--source > button:nth-child(1)",
@@ -32,8 +32,8 @@ export default class Translate {
   input;
   output;
   constructor(headless, input, output) {
-    this.input = input;
-    this.output = output;
+    this.input = Langs[input];
+    this.output = Langs[output];
     //@ts-ignore
     return (async () => {
    
@@ -167,4 +167,11 @@ export default class Translate {
     }
     return value;
   }
+  async translateData(t, data)  {
+    const result = [];
+    for (let i = 0; i < data.length; i++) {
+      result[i] = await t.getTranslation(data[i]);
+    }
+    return result;
+  };
 }
