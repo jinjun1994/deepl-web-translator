@@ -1,4 +1,4 @@
-import Translation from "./translate.js";
+import Translation from "./index.js";
 import Langs from "./lang.js";
 const translateData = async (t, data) => {
   const result = [];
