@@ -7,10 +7,14 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "puppeteer": "^5.5.0"
   },
   "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinjun1994/deepl-web-translator.git"
+  },
   "type": "module"
 }
