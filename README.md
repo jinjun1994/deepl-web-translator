@@ -20,7 +20,7 @@ No key required
 ## Usage
 
 ``` js
-import Translation from "./index.js";
+import Translation from "deepl-web-translator";
 
 
 (async () => {
